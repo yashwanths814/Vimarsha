@@ -8,7 +8,7 @@ The project solves a **real, large-scale operational problem faced by Indian Rai
 
 ---
 
-## 🇮🇳 Smart India Hackathon Journey
+## Smart India Hackathon Journey
 
 - **Problem Statement ID:** SIH25021  
 - **Problem Statement Title:**  
