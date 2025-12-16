@@ -1,89 +1,143 @@
+
 ## 🏆 National Recognition – Smart India Hackathon (SIH)
 
-This project, **LUMINA – Laser Unique Marking & Inspection for Rail Assets**, was officially **selected for the Smart India Hackathon (SIH)**, India’s largest open innovation competition organized by the **Government of India**.
+**VIMARSHA / LUMINA – Laser Unique Marking & Inspection for Rail Assets**  
+was officially selected for the **Smart India Hackathon (SIH)**, India’s largest open innovation competition organized by the **Government of India**.
 
-The solution addresses a **real and critical problem faced by the Indian Railways**—the lack of a permanent, verifiable, and scalable system for identifying, inspecting, and managing railway track fittings such as **ERCs, liners, and sleepers**.
+The project solves a **real, large-scale operational problem faced by Indian Railways**—the absence of a permanent, intelligent, and automated system to identify, verify, and inspect railway track fittings.
 
 ---
 
 ## 🇮🇳 Smart India Hackathon Journey
 
 - **Problem Statement ID:** SIH25021  
+- **Problem Statement Title:**  
+  *AI based development of Laser based QR Code marking on track fittings on Indian Railways*
 - **Theme:** Transportation & Logistics  
 - **Category:** Hardware + Software  
 - **Team Name:** Vimarsha  
 - **Team ID:** 51849  
 
-Out of **305+ idea submissions from across India**, our project was:
+Out of **305+ idea submissions across India**, our project was:
 
 - ✅ **Selected at the national level**
-- 🏅 **Finalized among the Top 5 teams**
-- 🧠 Invited to participate in the **National Level Hackathon**
-- 🏫 Conducted over **5 intensive days** at  
-  **Amal Jyothi College of Engineering, Kerala**
+- 🏅 **Shortlisted among the Top 5 teams**
+- 🧠 **Grand Finalist**
+- 🏫 Participated in a **5-day National Level Hackathon**  
+  held at **Amal Jyothi College of Engineering, Kerala**
 
-This recognition validates the **technical feasibility, innovation, and real-world relevance** of our solution.
+This selection validates the **innovation, feasibility, and real-world impact** of the solution.
 
 ---
 
-## 🚧 Real Problem Addressed (Indian Railways)
+## 🚧 Problem Faced by Indian Railways
 
-Indian Railways faces persistent challenges in:
+Indian Railways currently faces challenges such as:
 
-- Manual identification of track fittings  
-- Lack of permanent asset identity  
-- Delayed fault detection  
-- Human-dependent inspection processes  
-- Poor traceability across asset lifecycle  
-
-Our solution directly addresses these gaps using **laser-based QR marking, AI verification, and autonomous inspection**.
+- No permanent digital identity for track fittings
+- Manual and error-prone inspections
+- Delayed fault reporting
+- Poor asset traceability across lifecycle
+- High dependency on human labor in harsh environments
 
 ---
 
 ## 💡 Proposed Solution – LUMINA Ecosystem
 
-**LUMINA** introduces a **permanent digital identity** for every rail asset using:
-
-### 🔹 Laser-Marked QR Codes
+### 🔹 Laser-Marked QR Code Identity
 - Fiber-laser engraved QR codes on:
-  - ERCs (Elastic Rail Clips)
-  - Liners
-  - Sleepers
-- Protected with **transparent aliphatic polyurethane coating**
+  - **ERCs (Elastic Rail Clips)**
+  - **Liners**
+  - **Sleepers**
+- Coated with **transparent aliphatic polyurethane**
 - Resistant to heat, corrosion, dust, vibration, and weather
-
-### 🔹 DRUVA – Autonomous Rail Inspection Bot
-- Solar-powered autonomous rail bot
-- Scans laser-marked QR codes
-- Verifies asset integrity using AI
-- Automatically reports:
-  - Faulty component details
-  - GPS-based location coordinates
-- Eliminates continuous manual inspection
-
-### 🔹 VIMARSHA Digital Platform
-- Secure, role-based access for authorized railway officials
-- QR-based asset lookup and verification
-- Integration with:
-  - **UDM Portal** (procurement & supply tracking)
-  - **TMS Portal** (track management system)
-- Centralized lifecycle monitoring of rail assets
+- Ensures **permanent digital identity** for each asset
 
 ---
 
-## 🤖 AI & Software Intelligence
+### 🤖 DRUVA – Autonomous Rail Inspection Bot
 
-The AI module (this repository) supports the LUMINA ecosystem by:
+- Solar-powered autonomous rail bot
+- Runs on **Raspberry Pi**
+- Dual functionality:
+  - QR scanning & asset verification
+  - Fault detection and reporting
+- Sensors used:
+  - HQ Camera
+  - LiDAR
+  - GPS
+  - IMU
+  - Ultrasonic sensors
+  - Acoustic sensors
+- Automatically sends:
+  - Asset ID
+  - Fault status
+  - GPS coordinates  
+  to the central system
 
-- Classifying railway components:
+---
+
+## 🌐 Live Platforms
+
+- **VIMARSHA Platform (Main System):**  
+  👉 https://vimarsha3.vercel.app/
+
+- **Rail Component Classification Model:**  
+  👉 https://railclassification-7.onrender.com
+  
+---
+
+### 🧠 AI & Software Intelligence (This Repository)
+
+This repository contains the **AI classification module** that:
+
+- Identifies railway components:
   - **ERC**
   - **Liner**
   - **Clip**
-- Providing a **confidence score** for every prediction
-- Enabling verification of scanned assets
-- Supporting real-time decision-making during inspections
+- Outputs:
+  - Predicted component type
+  - **Confidence score**
+- Built using:
+  - YOLO-based deep learning
+  - PyTorch → ONNX optimization
+- Dataset:
+  - **150+ real railway asset images**
+  - Fully **manually annotated with bounding boxes**
+- Designed for:
+  - Real-time inference
+  - Edge + cloud deployment
 
-The dataset consists of **150+ manually collected and annotated images**, with **hand-drawn bounding boxes** to ensure accuracy and reliability.
+---
+
+## 🔄 End-to-End System Flow
+
+1. Asset is laser-marked with QR code  
+2. DRUVA or mobile device scans the QR  
+3. Image is sent to AI classification service  
+4. Model predicts component + confidence score  
+5. Data is stored and visualized in **VIMARSHA portal**  
+6. Authorized railway officials access asset lifecycle data  
+
+---
+
+## 🧩 System Integrations
+
+- **VIMARSHA Portal:** Central asset management
+- **UDM Portal:** Procurement & supply tracking
+- **TMS Portal:** Track management & maintenance records
+- **Encrypted access:** Only authorized officials can view/edit data
+
+---
+
+## ⚙️ Technology Stack
+
+### Software
+- **Backend:** Python, Flask
+- **AI Model:** YOLO (PyTorch, ONNX)
+- **Frontend:** Next.js, React
+- **Database:** Firebase / Cloud DB
+- **Deployment:** Render, Vercel
 
 ---
 
@@ -107,30 +161,30 @@ The dataset consists of **150+ manually collected and annotated images**, with *
 
 ---
 
-## 📈 Impact & Benefits
-
-- 🚆 Enhanced railway safety
-- 🧠 AI-driven inspection & verification
-- 🔐 Encrypted and authorized data access
-- 🕒 Faster fault detection & response
-- 📊 Complete asset lifecycle traceability
-- 🇮🇳 Supports national railway digitization goals
-
----
 
 ## 👨‍💻 Software Contributors
 
 - **Inchara S**
 - **Yashwanth S**
 
-(Contributors to AI model development, software platform, and system integration)
+---
+
+## 📜 License
+
+This project is licensed under the **Apache License 2.0**.
+
+- Allows use, modification, and distribution
+- Suitable for **government, academic, and industrial adoption**
+- Requires attribution and license notice
+
+See the `LICENSE` file for full details.
 
 ---
 
 ## 🙌 Acknowledgement
 
-We acknowledge **Smart India Hackathon (SIH)** and the **Government of India** for providing a national platform to innovate solutions for real-world problems faced by Indian Railways.
+We thank the **Government of India** and **Smart India Hackathon (SIH)** for providing a national platform to innovate solutions for real challenges faced by Indian Railways.
 
 ---
 
-**LUMINA & VIMARSHA represent a step toward intelligent, autonomous, and digitally traceable railway infrastructure for India.**
+**VIMARSHA & LUMINA represent a future-ready, AI-driven, autonomous approach to railway asset management in India.**
